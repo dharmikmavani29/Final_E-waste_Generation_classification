@@ -1,8 +1,24 @@
-# ⚡ E-Waste Image Classification with EfficientNetV2B0 - Full Project README
+#  E-Waste Image Classification with EfficientNetV2B0 - Full Project README
 
 ---
 
-# 🔥 Complete Deep Learning Workflow + Streamlit Web App
+#  End-to-End Deep Learning Pipeline with Streamlit Integration
+
+---
+
+## 📂 Dataset Access
+
+The dataset required to run this project is available on Kaggle:
+
+[🔗 E-Waste Image Dataset on Kaggle](https://www.kaggle.com/datasets/akshat103/e-waste-image-dataset)
+
+After downloading, extract the dataset and update these paths in your code accordingly:
+
+```python
+testpath = r'path-to-dataset/test'
+trainpath = r'path-to-dataset/train'
+validpath = r'path-to-dataset/val'
+```
 
 ---
 
@@ -255,7 +271,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="E-Waste Image Classifier", layout="centered")
-st.title("♻️ E-Waste Image Classification App")
+st.title("\u267b\ufe0f E-Waste Image Classification App")
 
 class_names = ['Battery', 'Keyboard', 'Microwave', 'Mobile', 'Mouse', 'PCB', 'Player', 'Printer', 'Television', 'Washing Machine']
 
@@ -277,8 +293,8 @@ if uploaded_files:
         predicted_class = class_names[np.argmax(prediction)]
         confidence = np.max(prediction) * 100
 
-        st.success(f"🏷️ Predicted Class: **{predicted_class}**")
-        st.info(f"🔥 Confidence: {confidence:.2f}%")
+        st.success(f"\ud83c\udff7\ufe0f Predicted Class: **{predicted_class}**")
+        st.info(f"\ud83d\udd25 Confidence: {confidence:.2f}%")
 
         fig, ax = plt.subplots()
         ax.barh(class_names, prediction[0] * 100, color='cyan')
@@ -300,5 +316,9 @@ streamlit run app.py
 * Upload images (jpg, png)
 * Get instant class prediction with confidence
 * Visual bar chart for probability distribution
+
+---
+
+# ✅ **End-to-End E-Waste Classifier with Visualization and Deployment Completed**
 
 ---
